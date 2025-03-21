@@ -1,5 +1,5 @@
 import { Client, GatewayIntentBits, Events } from 'discord.js';
-import token from './config.json' with { type: "json" };
+import config from './config.json' with { type: "json" };
 import minimist from 'minimist';
 import fetch from 'node-fetch';
 
@@ -72,5 +72,5 @@ client.on(Events.MessageCreate, message => {
 
 });
 
-LOG("Starting up bot with logging...")
-client.login("MTM1MjYxNTU1NTY2Nzg1MzM5NQ.GlZZCu.kLIWFVfz1Vze5TSRXQDt1DC5vzKipmml3afCIs");
+LOG("Starting up bot with logging...");
+client.login(config.token);
