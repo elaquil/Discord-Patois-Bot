@@ -1,0 +1,19 @@
+{
+  "name": "discord-patois-bot",
+  "version": "0.0.1",
+  "description": "translates text to patois",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "author": "Ismael Hamilton-El Aquil",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/translate": "^9.0.1",
+    "discord.js": "14.18.0",
+    "dotenv": "16.4.7",
+    "minimist": "^1.2.8",
+    "node-fetch": "^3.3.2"
+  }
+}
