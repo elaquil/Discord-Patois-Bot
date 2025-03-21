@@ -1,7 +1,7 @@
-import { Client, GatewayIntentBits, Events } from 'discord.js';
-import config from './config.json' with { type: "json" };
-import minimist from 'minimist';
-import fetch from 'node-fetch';
+const { Client, GatewayIntentBits, Events } = require('discord.js');
+const minimist = require('minimist');
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+const config = require('./config.json');
 
 const argv = minimist(process.argv.slice(2));
 const LOG = (argv['log'] || argv['l']) ? console.log.bind(console) : () => {};

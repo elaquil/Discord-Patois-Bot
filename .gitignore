@@ -47,3 +47,4 @@ Thumbs.db
 
 translation-api*.json
 config.json
+package-lock.json
