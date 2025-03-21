@@ -66,6 +66,7 @@ client.on(Events.MessageCreate, message => {
         if (translatedText.endsWith(" .")) {
             translatedText = translatedText.slice(0, -2);
         }
+        LOG("Replied with:" + translatedText)
         message.reply(translatedText);
     })
     .catch(error => console.error('Error:', error));
