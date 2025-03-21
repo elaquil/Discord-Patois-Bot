@@ -35,8 +35,15 @@ client.on(Events.MessageCreate, message => {
         return;
     }
 
+    if (!message.mentions.has(client.user)) {
+        LOG("Bot is not mentioned in the message. Ignoring...");
+        return;
+    }
+
     const urlRegex = /(https?:\/\/[^\s]+)/g;
     let cleanMessage = message.content.replace(urlRegex, '');
+    const botTag = `<@${client.user.id}>`;
+    cleanMessage = cleanMessage.replace(botTag, '').trim();
 
     if (cleanMessage === '') {
         LOG("Message is empty. Ignoring...");
